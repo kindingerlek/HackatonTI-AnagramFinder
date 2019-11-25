@@ -1,5 +1,9 @@
 # HacktonTI-AnagramFinder
 
+Programa desenvolvido por Lucas Ernesto Kindinger, como parte da segunda etapa do processo de seleção do evento **[Hackaton Carreiras - Edição TI](http://materiais.up.edu.br/hack-ti)** que ocorrerá no dia 30 de Novembro de 2019, em Curitiba.
+
+---
+
 ## O Desafio:
 
 ### Anagramas!
