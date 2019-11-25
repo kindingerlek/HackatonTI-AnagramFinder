@@ -60,9 +60,13 @@ namespace HackatonTI_AnagramFinder
                     // Salva na lista, como string unica, o conjunto encontrado
                     subset.Add(string.Join(" ", stack.OrderBy(x => x).ToArray()));
                 }
+                else
+                {
+                    // Continua a busca por anagramas até que não sobre caracteres
+                    FindAnagramsRecursively(leftResult, list, stack, validKeys, subset);
+                }
 
-                // Caso contrario, caso ainda haja caracteres sobrando, continua a busca por anagramas
-                FindAnagramsRecursively(leftResult, list, stack, validKeys, subset);  
+                // Remove o item da pilha temporária
                 stack.Pop();
             }
         }

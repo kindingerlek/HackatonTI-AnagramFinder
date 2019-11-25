@@ -33,9 +33,9 @@ namespace HackatonTI_AnagramFinder
             var anagramList = anagramFinder.GetAnagram(word.ToUpper());
             stopwatch.Stop();
 
-            Console.WriteLine($"\nHas been found {anagramList.Length} anagrams set in time: {stopwatch.Elapsed}"); 
+            Console.WriteLine($"\nHas been found {anagramList.Length} anagrams sets in time: {stopwatch.Elapsed}"); 
 
-            if (ReadUserDecision("Do you want print them?[Y/N]"))
+            if (ReadUserDecision("Do you want print all them?"))
             {
                 stopwatch.Restart();
                 var s = string.Join('\n', anagramList);
@@ -52,7 +52,7 @@ namespace HackatonTI_AnagramFinder
 
             Regex rgx = new Regex(@"[^A-Z ]", RegexOptions.IgnoreCase);
            
-            Console.WriteLine("Type a word or an expression with 16 alphabetic characters, or '0' to exit:");
+            Console.WriteLine("\nType a word or an expression with 16 alphabetic characters, or '0' to exit:");
             input = Console.ReadLine();
 
             if (input == "0")
@@ -60,7 +60,7 @@ namespace HackatonTI_AnagramFinder
 
             if (rgx.IsMatch(input))
             {
-                Console.WriteLine("The typed expression has invalid characters! Only letter is allowed.");
+                Console.WriteLine("The typed expression has invalid characters! Only letters is allowed.");
                 return null;
             }
 
