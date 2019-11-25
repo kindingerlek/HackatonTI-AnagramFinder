@@ -48,22 +48,24 @@ namespace HackatonTI_AnagramFinder
             string input;
 
             Regex rgx = new Regex(@"[^A-Z ]", RegexOptions.IgnoreCase);
-            do
+           
+            Console.WriteLine("Digite uma palavra ou frase de até 16 caracteres alfabéticos, ou '0' para sair:");
+            input = Console.ReadLine();
+
+            if (input == "0")
+                return null;
+
+            if (rgx.IsMatch(input))
             {
-                Console.WriteLine("Digite uma palavra ou frase de até 16 caracteres alfabéticos, ou '0' para sair:");
-                input = Console.ReadLine();
-
-                if (input == "0")
-                    return null;
-
-                if (rgx.IsMatch(input))
-                    Console.WriteLine("A expressão digitada possui caracteres inválidos! Apenas letras (não acentuadas) são válidas.");
-
-                if (input.Length > 16)
-                    Console.WriteLine("A expressão digitada possui mais de 16 caracteres!");
-
+                Console.WriteLine("A expressão digitada possui caracteres inválidos! Apenas letras (não acentuadas) são válidas.");
+                return null;
             }
-            while (input.Length > 16 || rgx.IsMatch(input));
+
+            if (input.Length > 16)
+            {
+                Console.WriteLine("A expressão digitada possui mais de 16 caracteres!");
+                return null;
+            }
 
             return input;
         }
