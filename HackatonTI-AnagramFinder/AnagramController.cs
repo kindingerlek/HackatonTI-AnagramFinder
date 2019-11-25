@@ -27,18 +27,21 @@ namespace HackatonTI_AnagramFinder
                 return;
 
             Console.WriteLine($"\nWord: {word} - {word.Length} characters\n");
+            Console.WriteLine("Looking for anagrams...");
 
             stopwatch.Restart();
-            Console.WriteLine("Buscando anagramas...");
             var anagramList = anagramFinder.GetAnagram(word.ToUpper());
             stopwatch.Stop();
 
-            Console.WriteLine($"\nForam encontrados {anagramList.Count} conjuntos de anagramas válidos no tempo {stopwatch.Elapsed}");
+            Console.WriteLine($"\nHas been found {anagramList.Length} anagrams set in time: {stopwatch.Elapsed}"); 
 
-            if (ReadUserDecision("Você deseja exibi-los?"))
+            if (ReadUserDecision("Do you want print them?[Y/N]"))
             {
-                foreach (var s in anagramList)
-                    Console.WriteLine(s);
+                stopwatch.Restart();
+                var s = string.Join('\n', anagramList);
+                Console.WriteLine(s);
+                stopwatch.Stop();
+                Console.WriteLine($"Time to print all anagrams: {stopwatch.Elapsed}");
             }
 
         }
@@ -49,7 +52,7 @@ namespace HackatonTI_AnagramFinder
 
             Regex rgx = new Regex(@"[^A-Z ]", RegexOptions.IgnoreCase);
            
-            Console.WriteLine("Digite uma palavra ou frase de até 16 caracteres alfabéticos, ou '0' para sair:");
+            Console.WriteLine("Type a word or an expression with 16 alphabetic characters, or '0' to exit:");
             input = Console.ReadLine();
 
             if (input == "0")
@@ -57,13 +60,13 @@ namespace HackatonTI_AnagramFinder
 
             if (rgx.IsMatch(input))
             {
-                Console.WriteLine("A expressão digitada possui caracteres inválidos! Apenas letras (não acentuadas) são válidas.");
+                Console.WriteLine("The typed expression has invalid characters! Only letter is allowed.");
                 return null;
             }
 
             if (input.Length > 16)
             {
-                Console.WriteLine("A expressão digitada possui mais de 16 caracteres!");
+                Console.WriteLine("The typed expression has more than 16 characters!");
                 return null;
             }
 
@@ -73,11 +76,11 @@ namespace HackatonTI_AnagramFinder
         private bool ReadUserDecision(string ask)
         {
             string input;
-            string[] acceptTerms = new string[] { "S", "SIM", "Y", "YES","1" };
-            string[] denyTerms = new string[] { "N", "NO", "NAO", "0" };
+            string[] acceptTerms = new string[] { "Y", "YES", "1" };
+            string[] denyTerms = new string[] { "N", "NO", "0" };
 
 
-            Console.WriteLine($"{ask} [S/N]");
+            Console.WriteLine($"{ask} [Y/N]");
             input = Console.ReadLine().ToUpper();
 
             if (acceptTerms.Contains(input))
@@ -86,7 +89,7 @@ namespace HackatonTI_AnagramFinder
             if (denyTerms.Contains(input))
                 return false;
 
-            Console.WriteLine("Resposta inválida!");
+            Console.WriteLine("Invalid answer!");
             return ReadUserDecision(ask);
         }
     }

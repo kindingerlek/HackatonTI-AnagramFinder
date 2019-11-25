@@ -9,14 +9,14 @@ namespace HackatonTI_AnagramFinder
 {
     public class AnagramFinder
     {
-       IEnumerable<string> wordsList = null;
+        string[] wordsList = null;
 
         public AnagramFinder(string[] validWords)
         {
             wordsList = validWords.OrderBy(x => x).ToArray();
         }
 
-        public List<string> GetAnagram(string word)
+        public string[] GetAnagram(string word)
         {
             word = word.ToUpper().Replace(" ", "");
 
@@ -25,7 +25,7 @@ namespace HackatonTI_AnagramFinder
             HashSet<string> validSubset = new HashSet<string>();
             FindAnagramsRecursively(word, wordsList, temp, validKeys, validSubset);
 
-            return validSubset.ToList();
+            return validSubset.OrderBy(x => x).ToArray();
         }
 
         private void FindAnagramsRecursively(string word, IEnumerable<string> source, Stack<string> stack, HashSet<string> validKeys, HashSet<string> subset)
@@ -42,8 +42,9 @@ namespace HackatonTI_AnagramFinder
             if (list.Length == 0)
                 return;
 
-            foreach(var validWord in list)
-            { 
+            for (int i = 0; i < list.Length; i++)
+            {
+                string validWord = list[i];
                 // Guarda a chave na pilha temporária
                 stack.Push(validWord);
 
