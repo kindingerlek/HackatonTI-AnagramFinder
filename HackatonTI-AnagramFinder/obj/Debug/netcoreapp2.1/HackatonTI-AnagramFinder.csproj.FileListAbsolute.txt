@@ -1,0 +1,12 @@
+D:\Projects\C#\HackatonTI-AnagramFinder\HackatonTI-AnagramFinder\bin\Debug\netcoreapp2.1\data\palavras.txt
+D:\Projects\C#\HackatonTI-AnagramFinder\HackatonTI-AnagramFinder\bin\Debug\netcoreapp2.1\HackatonTI-AnagramFinder.deps.json
+D:\Projects\C#\HackatonTI-AnagramFinder\HackatonTI-AnagramFinder\bin\Debug\netcoreapp2.1\HackatonTI-AnagramFinder.runtimeconfig.json
+D:\Projects\C#\HackatonTI-AnagramFinder\HackatonTI-AnagramFinder\bin\Debug\netcoreapp2.1\HackatonTI-AnagramFinder.runtimeconfig.dev.json
+D:\Projects\C#\HackatonTI-AnagramFinder\HackatonTI-AnagramFinder\bin\Debug\netcoreapp2.1\HackatonTI-AnagramFinder.dll
+D:\Projects\C#\HackatonTI-AnagramFinder\HackatonTI-AnagramFinder\bin\Debug\netcoreapp2.1\HackatonTI-AnagramFinder.pdb
+D:\Projects\C#\HackatonTI-AnagramFinder\HackatonTI-AnagramFinder\obj\Debug\netcoreapp2.1\HackatonTI-AnagramFinder.csprojAssemblyReference.cache
+D:\Projects\C#\HackatonTI-AnagramFinder\HackatonTI-AnagramFinder\obj\Debug\netcoreapp2.1\HackatonTI-AnagramFinder.csproj.CoreCompileInputs.cache
+D:\Projects\C#\HackatonTI-AnagramFinder\HackatonTI-AnagramFinder\obj\Debug\netcoreapp2.1\HackatonTI-AnagramFinder.AssemblyInfoInputs.cache
+D:\Projects\C#\HackatonTI-AnagramFinder\HackatonTI-AnagramFinder\obj\Debug\netcoreapp2.1\HackatonTI-AnagramFinder.AssemblyInfo.cs
+D:\Projects\C#\HackatonTI-AnagramFinder\HackatonTI-AnagramFinder\obj\Debug\netcoreapp2.1\HackatonTI-AnagramFinder.dll
+D:\Projects\C#\HackatonTI-AnagramFinder\HackatonTI-AnagramFinder\obj\Debug\netcoreapp2.1\HackatonTI-AnagramFinder.pdb
